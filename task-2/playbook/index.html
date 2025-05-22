@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project-2</title>
+    <style>
+     /* CSS Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* CSS Variables*/ 
+:root{
+   --navbar-height: 59px; 
+}
+
+/* navigation bar*/
+#navbar {
+    display:flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+}
+
+/* navigation bar:logo and image */
+#logo{
+    margin: 21px 27px;
+}
+#logo img{
+    border-radius: 30px;
+    height: 59px;
+    margin: -7px 2px;
+    /* padding: 20px; */
+    /* filter:opacity(10%); */
+    opacity: 0.7;
+    filter: invert(80%);
+}
+/* navigation bar:list styling */
+/* #navbar{
+    position: relative;
+} */
+#navbar ul{
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+/* home section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 800px;
+    /* height: 383px; */
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: " ";
+    position: absolute;
+    background :url('https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1{
+    color: rgb(44, 39, 39);
+    text-align: center;
+}
+
+#home p{
+    color: rgb(104, 100, 100);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+
+}
+#services .box{
+    border: 2px solid brown;
+    border-radius: 20px;
+    padding: 34px;
+    margin: 3px 25px;
+
+}
+#services .box img{
+    height: 160px;
+    display: block;
+    margin: auto;
+}
+#services .box p{
+    font-family: Arial,sans-serif;
+}
+/* client section */
+#client-section ::before{ 
+    content: "";
+    position: relative;
+    width: 100%;
+    height: 54%;
+}
+#client-section{
+    background: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80') no-repeat center center/cover;
+    position: relative;
+    height: 344px;
+    z-index: -1;
+    opacity: 0.4;
+}
+ #clients{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ .client-item{
+    padding: 34px;
+ }
+
+ #clients img{
+    height: 124px;
+ }
+/* contact section */
+
+#contact{
+    position: relative;
+}
+#contact ::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url();
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+}
+footer{
+    background:black;
+    color: white;
+    padding: 9px 20px;
+}
+/* Utility Classes */
+.h-primary{
+    font-family:Helvetica, sans-serif;
+    font-size: 2.8rem;
+    padding: 12px;
+    
+}
+.h-secondary{
+    font-family:Helvetica, sans-serif;
+    font-size: 2.2 rem;
+    padding: 12px;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid wheat;
+    background-color: rgb(155, 154, 154);
+    color: whitesmoke;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
+    </style>
+
+
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://cdn.pixabay.com/photo/2017/03/16/21/18/logo-2150297__340.png" alt="www.myWebsite.com">
+        </div>
+        <ul>
+            <li class="item"><a href="">Home</a></li>
+            <li class="item"><a href="">Services</a></li>
+            <li class="item"><a href="">About</a></li>
+            <li class="item"><a href="">Contact Us</a></li>
+            <li class="item"><a href="">Login</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome To This Website</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sequi, consectetur debitis sunt velit porro tempora accusamus eveniet repudiandae culpa nostrum esse temporibus sit vitae odio. Ab ipsa ratione sed.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab sint eos quasi soluta, adipisci impedit quod natus quae, eius in ex unde beatae nemo aliquid laudantium quia deserunt necessitatibus recusandae?</p>
+        <button class="btn">Order Now</button>
+    </section>
+<hr>
+    <section class="Services-Container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                <h2 class="h-secondary center">Food Catering</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi unde mollitia blanditiis, consectetur earum libero animi totam harum iste praesentium!</p>
+            </div>
+            <div class="box">
+                <img src="https://img.freepik.com/free-vector/food-delivery-man-riding-motorcycles-cartoon-art-illustration_56104-610.jpg?w=740&t=st=1679673907~exp=1679674507~hmac=a7eb316946eb08cde60e9da8c8c17665633cf54dbc9b0b44ddcbd8a5cf5fd12a" alt="">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi unde mollitia blanditiis, consectetur earum libero animi totam harum iste praesentium!</p>
+            </div>
+            <div class="box">
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80" alt="">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi unde mollitia blanditiis, consectetur earum libero animi totam harum iste praesentium!</p>
+            </div>
+        </div> 
+    </section>
+    <hr>
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="https://cdn.pixabay.com/photo/2016/11/18/11/16/social-1834013_960_720.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="https://cdn.pixabay.com/photo/2016/11/18/11/16/instagram-1834010_960_720.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="https://cdn.pixabay.com/photo/2016/11/18/11/16/facebook-1834007_960_720.png" alt="">
+            </div>
+            <div class="client-item">
+                <img src="https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088004_960_720.png" alt="">
+            </div>
+        </div>
+    </section>
+<hr>
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="name">Email: </label>
+                    <input type="email" name="name" id="email" placeholder="Enter Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="name">Phone N0.: </label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter Your phone No.">
+                </div>
+                <!-- <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                </div> -->
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.myWebsite.com . All right reserved!
+        </div>
+    </footer>
+</body>
+</html>
